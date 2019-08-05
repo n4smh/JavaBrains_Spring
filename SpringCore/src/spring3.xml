@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="triangle5.1" class="org.n4smh.springsample1.Triangle5"
+		autowire="byName" scope="prototype">
+	</bean>
+
+	<bean id="triangle5.2" class="org.n4smh.springsample1.Triangle5"
+		autowire="constructor">
+	</bean>
+
+	<bean id="pointA" class="org.n4smh.springsample1.Point" scope="prototype">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="pointB" class="org.n4smh.springsample1.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="pointC" class="org.n4smh.springsample1.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="triangle6" class="org.n4smh.springsample1.Triangle6" scope="prototype">
+	</bean>
+</beans>

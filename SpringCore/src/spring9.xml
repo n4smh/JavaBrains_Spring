@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="circle1" class="org.n4smh.springsample1.Circle12">
+	</bean>
+	<bean id="circle2" class="org.n4smh.springsample1.Circle13">
+	</bean>
+
+	<!-- <bean id="center" class="org.n4smh.springsample1.Point"> <property 
+		name="x" value="1" /> <property name="y" value="1" /> </bean> -->
+
+	<bean id="point1Bean" class="org.n4smh.springsample1.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="point2Bean" class="org.n4smh.springsample1.Point">
+		<qualifier value="circleRelated" />
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="point3Bean" class="org.n4smh.springsample1.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
+
+	<!-- <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" 
+		/> <bean class="org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver" 
+		/> -->
+
+	<!-- annotation-config is the simple way of specifying all the above annotation 
+		PostProcessor -->
+	<context:annotation-config />
+</beans>

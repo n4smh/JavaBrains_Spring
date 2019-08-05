@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-destroy-method="myCleanUp">
+	<bean id="triangle1" class="org.n4smh.springsample1.Triangle8"
+		init-method="myInit">
+		<property name="pointA" ref="point1Bean" />
+		<property name="pointB" ref="point2Bean" />
+		<property name="pointC" ref="point3Bean" />
+	</bean>
+
+	<bean id="triangle2" class="org.n4smh.springsample1.Triangle8"
+		init-method="myInit">
+		<constructor-arg index="0" ref="point1Bean" />
+		<constructor-arg index="1" ref="point2Bean" />
+		<constructor-arg index="2" ref="point3Bean" />
+	</bean>
+
+	<bean id="point1Bean" class="org.n4smh.springsample1.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="point2Bean" class="org.n4smh.springsample1.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="point3Bean" class="org.n4smh.springsample1.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="triangle9" class="org.n4smh.springsample1.Triangle8"></bean>
+</beans>

@@ -1,4 +1,4 @@
-# JavaBrains_Spring
+# Spring
 Repo contains Spring basics code created by refering to JavaBrains. <br/>
 
 Spring version: 3.2.18.RELEASE  <br/>
